@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.0.1)
+  - PKHUD (3.2.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - PKHUD (from `https://github.com/toyship/PKHUD.git`)
+
+EXTERNAL SOURCES:
+  PKHUD:
+    :git: https://github.com/toyship/PKHUD.git
+
+CHECKOUT OPTIONS:
+  PKHUD:
+    :commit: 28fb970b41d63134e962f9da766b96670c0f55f0
+    :git: https://github.com/toyship/PKHUD.git
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
+
+PODFILE CHECKSUM: 66c4d49dcd8fe0bed15868a5552031fb850ac5f8
+
+COCOAPODS: 1.0.1

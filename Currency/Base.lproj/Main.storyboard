@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wKB-Ja-7ND">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Download CurrencyVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DownloadCurrencyVC" customModule="Currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUc-l1-xDb">
+                                <rect key="frame" x="77.5" y="315" width="220" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Download currencies list"/>
+                                <connections>
+                                    <action selector="downloadCurrencyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ins-OW-71j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BUc-l1-xDb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DMR-7C-jf6"/>
+                            <constraint firstItem="BUc-l1-xDb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ERM-SS-aZx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vo4-11-923"/>
+                    <connections>
+                        <outlet property="downloadCurrencyButton" destination="BUc-l1-xDb" id="4gB-bk-aRC"/>
+                        <segue destination="nd3-30-U9W" kind="show" identifier="chooseCurrency" id="o7M-gQ-7Bo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="74.212893553223395"/>
+        </scene>
+        <!--Choose CurrencyVC-->
+        <scene sceneID="Eqg-f3-LuV">
+            <objects>
+                <viewController id="nd3-30-U9W" customClass="ChooseCurrencyVC" customModule="Currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0jh-Eh-fd0"/>
+                        <viewControllerLayoutGuide type="bottom" id="9fm-Zu-MdR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ol3-Pa-lq8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKp-TI-8Lx">
+                                <rect key="frame" x="0.0" y="179.5" width="375" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="AwU-W8-KDN"/>
+                                    <constraint firstAttribute="height" constant="220" id="ahq-qa-lTY"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chosen currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jx-Xl-TDs">
+                                <rect key="frame" x="116.5" y="98" width="143" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akA-af-v3a">
+                                <rect key="frame" x="31" y="136.5" width="313" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTB-WV-P1s">
+                                <rect key="frame" x="88" y="404.5" width="199" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Set currency and proceed"/>
+                                <connections>
+                                    <action selector="setCurrencyButtonTapped:" destination="nd3-30-U9W" eventType="touchUpInside" id="lXw-BG-AwA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IKp-TI-8Lx" secondAttribute="trailing" id="6ox-cK-KEH"/>
+                            <constraint firstItem="zTB-WV-P1s" firstAttribute="top" secondItem="IKp-TI-8Lx" secondAttribute="bottom" constant="5" id="85T-iX-MoI"/>
+                            <constraint firstItem="akA-af-v3a" firstAttribute="top" secondItem="0Jx-Xl-TDs" secondAttribute="bottom" constant="17" id="HlH-Wo-rfM"/>
+                            <constraint firstItem="akA-af-v3a" firstAttribute="centerX" secondItem="Ol3-Pa-lq8" secondAttribute="centerX" id="T7n-l3-xzz"/>
+                            <constraint firstItem="0Jx-Xl-TDs" firstAttribute="top" secondItem="0jh-Eh-fd0" secondAttribute="bottom" constant="34" id="URo-kE-7pZ"/>
+                            <constraint firstItem="IKp-TI-8Lx" firstAttribute="top" secondItem="0Jx-Xl-TDs" secondAttribute="bottom" constant="60" id="hMO-Pc-Cst"/>
+                            <constraint firstItem="0Jx-Xl-TDs" firstAttribute="centerX" secondItem="Ol3-Pa-lq8" secondAttribute="centerX" id="hmh-Mx-sga"/>
+                            <constraint firstItem="IKp-TI-8Lx" firstAttribute="centerX" secondItem="Ol3-Pa-lq8" secondAttribute="centerX" id="kSE-HS-pJM"/>
+                            <constraint firstItem="zTB-WV-P1s" firstAttribute="centerX" secondItem="Ol3-Pa-lq8" secondAttribute="centerX" id="lSf-Rz-iZ6"/>
+                            <constraint firstItem="IKp-TI-8Lx" firstAttribute="leading" secondItem="Ol3-Pa-lq8" secondAttribute="leading" id="u5V-c6-eBD"/>
+                            <constraint firstItem="akA-af-v3a" firstAttribute="leading" secondItem="Ol3-Pa-lq8" secondAttribute="leadingMargin" constant="15" id="uG0-h7-oRa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currencyNameLabel" destination="akA-af-v3a" id="p6e-BI-CP2"/>
+                        <outlet property="currencyPicker" destination="IKp-TI-8Lx" id="XX7-KT-SNn"/>
+                        <outlet property="setCurrencyButton" destination="zTB-WV-P1s" id="fpJ-pd-8HP"/>
+                        <segue destination="w2M-U2-P43" kind="show" identifier="changeCurrency" id="u1Y-00-PvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRm-Zv-97s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="73.313343328335833"/>
+        </scene>
+        <!--Change CurrencyVC-->
+        <scene sceneID="vUe-8z-CF3">
+            <objects>
+                <viewController id="w2M-U2-P43" customClass="ChangeCurrencyVC" customModule="Currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I0e-RJ-NlB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y0A-6o-ddC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8pM-Al-44e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chosen currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51B-wD-gw5">
+                                <rect key="frame" x="116.5" y="98" width="143" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-T1-o1H">
+                                <rect key="frame" x="31" y="136.5" width="313" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyQ-1z-0ge">
+                                <rect key="frame" x="0.0" y="179.5" width="375" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="EZv-eR-8dh"/>
+                                    <constraint firstAttribute="height" constant="220" id="qJk-J9-yz6"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyI-6t-dAk">
+                                <rect key="frame" x="102.5" y="404.5" width="171" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Change Your currency"/>
+                                <connections>
+                                    <action selector="changeCurrencyButtonTapped:" destination="w2M-U2-P43" eventType="touchUpInside" id="QCq-NN-0x1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXE-fb-CLN">
+                                <rect key="frame" x="121" y="442.5" width="134" height="30"/>
+                                <state key="normal" title="Start process again"/>
+                                <connections>
+                                    <action selector="startAgainButtonTapped:" destination="w2M-U2-P43" eventType="touchUpInside" id="0g2-Qi-RUN"/>
+                                    <segue destination="ApV-VP-71B" kind="unwind" unwindAction="unwindToDownload:" id="cDd-TC-Qqv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pyI-6t-dAk" firstAttribute="centerX" secondItem="8pM-Al-44e" secondAttribute="centerX" id="5J6-ZP-eJc"/>
+                            <constraint firstItem="VyQ-1z-0ge" firstAttribute="centerX" secondItem="8pM-Al-44e" secondAttribute="centerX" id="95C-7o-a87"/>
+                            <constraint firstItem="VyQ-1z-0ge" firstAttribute="leading" secondItem="8pM-Al-44e" secondAttribute="leading" id="AIb-Uo-fm0"/>
+                            <constraint firstAttribute="trailing" secondItem="VyQ-1z-0ge" secondAttribute="trailing" id="EyJ-4R-d7W"/>
+                            <constraint firstItem="vkd-T1-o1H" firstAttribute="centerX" secondItem="8pM-Al-44e" secondAttribute="centerX" id="MVk-Rh-jZb"/>
+                            <constraint firstItem="oXE-fb-CLN" firstAttribute="top" secondItem="pyI-6t-dAk" secondAttribute="bottom" constant="5" id="YhS-RG-vbb"/>
+                            <constraint firstItem="51B-wD-gw5" firstAttribute="top" secondItem="I0e-RJ-NlB" secondAttribute="bottom" constant="34" id="aUr-Zq-2e9"/>
+                            <constraint firstItem="51B-wD-gw5" firstAttribute="centerX" secondItem="8pM-Al-44e" secondAttribute="centerX" id="c0Z-GP-7e0"/>
+                            <constraint firstItem="vkd-T1-o1H" firstAttribute="top" secondItem="51B-wD-gw5" secondAttribute="bottom" constant="17" id="c6X-YC-Pbd"/>
+                            <constraint firstItem="pyI-6t-dAk" firstAttribute="top" secondItem="VyQ-1z-0ge" secondAttribute="bottom" constant="5" id="fUo-Rp-Vjx"/>
+                            <constraint firstItem="VyQ-1z-0ge" firstAttribute="top" secondItem="51B-wD-gw5" secondAttribute="bottom" constant="60" id="ncF-u5-SUM"/>
+                            <constraint firstItem="vkd-T1-o1H" firstAttribute="leading" secondItem="8pM-Al-44e" secondAttribute="leadingMargin" constant="15" id="tYk-X4-dbO"/>
+                            <constraint firstItem="oXE-fb-CLN" firstAttribute="centerX" secondItem="8pM-Al-44e" secondAttribute="centerX" id="w3N-Xg-qA5"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="changeCurrencyButton" destination="pyI-6t-dAk" id="voh-GU-QYo"/>
+                        <outlet property="chosenCurrencyLabel" destination="vkd-T1-o1H" id="dTz-Rb-oHC"/>
+                        <outlet property="currencyPicker" destination="VyQ-1z-0ge" id="uhV-Uo-3JO"/>
+                        <outlet property="startAgainButton" destination="oXE-fb-CLN" id="YXf-sj-XDy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ch5-NL-8O0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ApV-VP-71B" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2685.5999999999999" y="72.413793103448285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pPu-IX-av9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wKB-Ja-7ND" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OB7-H2-zXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dOE-H5-pmr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao7-ci-ZFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="74"/>
+        </scene>
+    </scenes>
+</document>
